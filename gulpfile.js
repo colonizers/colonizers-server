@@ -24,6 +24,7 @@ gulp.task('jquery-plugins', function() {
 
 gulp.task('script', ['jquery-plugins'], function() {
   return dev.gulp.bundle({
+    baseDir: __dirname,
     file: './app/js/site.js',
     dest: './public/site.js',
     jquery: './temp/jquery-plugins.js'
